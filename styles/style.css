@@ -7,3 +7,16 @@
     font-family: Playfair Display;
     src: url(/assets/fonts/Playfair_Display_SC/);
 }
+
+/* HEADER */
+header {
+    background-color: rgb(254, 131, 0);
+    padding: 16px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {height: 50px; cursor: pointer;}
+
+.menu_icon{height: 50px; cursor: pointer;}
