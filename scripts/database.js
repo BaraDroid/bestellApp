@@ -42,3 +42,17 @@ let dishes = [
 ];
 
 let basket = [];
+
+let providers = [
+    {
+        "name": "Luogo del Cuore",
+        "review": 99,
+        "pictures": "/assets/imgs/antipasto.jpg"
+    }
+];
+
+let sliderPictures = [
+    "/assets/imgs/pasta_salad.jpg",
+    "/assets/imgs/pizza_plate.jpg",
+    "/assets/imgs/pizza_plate_divided.jpg"
+]

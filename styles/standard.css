@@ -5,6 +5,7 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 body {width: 100dvw;}

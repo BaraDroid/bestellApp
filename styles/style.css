@@ -17,6 +17,13 @@ header {
     align-items: center;
 }
 
-.logo {height: 50px; cursor: pointer;}
+.logo {height: 50px;}
 
 .menu_icon{height: 50px; cursor: pointer;}
+
+/* SLIDER */
+.slider {
+    background-image: url(/assets/imgs/pizza_plate_divided.jpg);
+    height: 400px;
+    background-size: cover;
+}
