@@ -2,3 +2,8 @@
     font-family: Comfortaa;
     src: url(/assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
+
+@font-face {
+    font-family: Playfair Display;
+    src: url(/assets/fonts/Playfair_Display_SC/);
+}
