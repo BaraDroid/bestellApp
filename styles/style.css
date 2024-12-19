@@ -4,8 +4,13 @@
 }
 
 @font-face {
-    font-family: Playfair Display;
-    src: url(/assets/fonts/Playfair_Display_SC/);
+    font-family: Playfair_Display;
+    src: url(/assets/fonts/Playfair_Display_SC/PlayfairDisplaySC-Bold.ttf);
+}
+
+body {
+    font-family: Comfortaa;
+    color: rgb(58, 1, 1);
 }
 
 /* HEADER */
@@ -26,4 +31,43 @@ header {
     background-image: url(/assets/imgs/pizza_plate_divided.jpg);
     height: 400px;
     background-size: cover;
+}
+
+/* COMPANY DESCRIPTION */
+.company_description {
+    padding: 16px 64px;
+}
+
+h1 {
+    font-family: Playfair_Display;
+    font-weight: 900;
+    font-size: 36px;
+    color: rgb(254, 131, 0);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+}
+
+.rating img {height: 28px; padding-bottom: 3px;}
+
+.path_of_dishes {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    background-color:rgba(242, 174, 2, 0.23);
+}
+
+.path_of_dishes img {
+    height: 24px;
+}
+
+h4 {
+    border:1px solid rgb(58, 1, 1);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
 }

@@ -47,7 +47,7 @@ let providers = [
     {
         "name": "Luogo del Cuore",
         "review": 99,
-        "pictures": "/assets/imgs/antipasto.jpg"
+        "picture": "assets/imgs/antipasto.jpg"
     }
 ];
 
