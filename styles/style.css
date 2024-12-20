@@ -34,8 +34,11 @@ header {
 }
 
 /* COMPANY DESCRIPTION */
+.main_page {padding: 8px 32px;}
+
 .company_description {
-    padding: 16px 64px;
+    border: 2px solid rgb(58, 1, 1);
+    border-radius: 15px;
 }
 
 h1 {
@@ -45,14 +48,24 @@ h1 {
     color: rgb(254, 131, 0);
 }
 
-.rating {
+.name_and_rating {
     display: flex;
-    align-items: center;
-    gap: 24px;
     padding: 24px;
+    align-items: center;
 }
 
-.rating img {height: 28px; padding-bottom: 3px;}
+.rating {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 12px;
+}
+
+.stars {
+    height: 28px; 
+    box-sizing: border-box; 
+}
 
 .path_of_dishes {
     display: flex;
@@ -70,4 +83,9 @@ h4 {
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.custom_picture {
+    overflow: hidden;
+    height: 200px;
 }

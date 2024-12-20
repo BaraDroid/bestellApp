@@ -47,14 +47,12 @@ let providers = [
     {
         "name": "Luogo del Cuore",
         "review": 99,
-        "picture": "Users/barboralambeinova/Desktop/dev_ak_projekte/modul_7/bestellapp/assets/imgs/antipasto.jpg"
+        "picture": "./assets/imgs/antipasto.jpg"
     }
 ];
 
 let sliderPictures = [
-    "/assets/imgs/pasta_salad.jpg",
-    "/assets/imgs/pizza_plate.jpg",
-    "/assets/imgs/pizza_plate_divided.jpg"
+    "./assets/imgs/pasta_salad.jpg",
+    "./assets/imgs/pizza_plate.jpg",
+    "./assets/imgs/pizza_plate_divided.jpg"
 ]
-
-console.log(providers[0].picture);
