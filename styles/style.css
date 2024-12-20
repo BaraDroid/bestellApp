@@ -34,11 +34,14 @@ header {
 }
 
 /* COMPANY DESCRIPTION */
-.main_page {padding: 8px 32px;}
-
-.company_description {
+.main_page {
+    margin: 8px 32px;
     border: 2px solid rgb(58, 1, 1);
     border-radius: 15px;
+}
+
+.company_description {
+    background-color:rgba(242, 174, 2, 0.23);
 }
 
 h1 {
@@ -51,7 +54,10 @@ h1 {
 .name_and_rating {
     display: flex;
     padding: 24px;
+    margin: 4px;
     align-items: center;
+    border: 2px solid rgb(58, 1, 1);
+    border-radius: 15px;
 }
 
 .rating {
@@ -71,7 +77,7 @@ h1 {
     display: flex;
     gap: 24px;
     padding: 24px;
-    background-color:rgba(242, 174, 2, 0.23);
+    
 }
 
 .path_of_dishes img {

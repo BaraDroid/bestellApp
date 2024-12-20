@@ -6,13 +6,17 @@ function init() {
 }
 
 function getRestaurantName() {
-    document.getElementById("restaurantName").innerHTML = providers[0].name;
+    document.getElementById("restaurantName").innerHTML = restaurants[0].name;
 }
 
 function getRating() {
-    document.getElementById("ratingBar").innerHTML = `Bewertung : ${providers[0].review}%`;
+    document.getElementById("ratingBar").innerHTML = `Bewertung : ${restaurants[0].review}%`;
 }
 
 function getProvidersPicture() {
-    document.getElementById("restaurantPicture").innerHTML = `<img src="${providers[0].picture}">`;
+    document.getElementById("restaurantPicture").innerHTML = `<img src="${restaurants[0].picture}">`;
+}
+
+function renderDishes() {
+    
 }
