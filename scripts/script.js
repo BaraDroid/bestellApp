@@ -14,5 +14,5 @@ function getRating() {
 }
 
 function getProvidersPicture() {
-    document.getElementById("restaurantPicture").innerHTML = `<img src="./${providers.picture}">`;
+    document.getElementById("restaurantPicture").innerHTML = `<img src="${providers[0].picture}">`;
 }
