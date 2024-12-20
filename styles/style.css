@@ -1,11 +1,11 @@
 @font-face {
     font-family: Comfortaa;
-    src: url(/assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+    src: url(../assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: Playfair_Display;
-    src: url(/assets/fonts/Playfair_Display_SC/PlayfairDisplaySC-Bold.ttf);
+    src: url(../assets/fonts/Playfair_Display_SC/PlayfairDisplaySC-Bold.ttf);
 }
 
 body {
@@ -28,13 +28,13 @@ header {
 
 /* SLIDER */
 .slider {
-    background-image: url(/assets/imgs/pizza_plate_divided.jpg);
+    background-image: url(../assets/imgs/pizza_plate_divided.jpg);
     height: 400px;
     background-size: cover;
 }
 
 /* COMPANY DESCRIPTION */
-.main_page {
+.main_content {
     margin: 8px 32px;
     border: 2px solid rgb(58, 1, 1);
     border-radius: 15px;
@@ -58,6 +58,7 @@ h1 {
     align-items: center;
     border: 2px solid rgb(58, 1, 1);
     border-radius: 15px;
+    background-color:rgba(242, 174, 2, 0.23);
 }
 
 .rating {
@@ -94,4 +95,17 @@ h4 {
 .custom_picture {
     overflow: hidden;
     height: 200px;
+}
+
+/* DISH CONTENT */
+.dish_card {
+    border: 2px solid rgb(58, 1, 1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish_description {
+    display: flex;
+    flex-direction: column;
 }

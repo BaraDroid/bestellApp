@@ -3,6 +3,7 @@ function init() {
     getRestaurantName();
     getRating();
     getProvidersPicture();
+    renderDishes();
 }
 
 function getRestaurantName() {
@@ -18,5 +19,9 @@ function getProvidersPicture() {
 }
 
 function renderDishes() {
-    
+    let contentRef = document.getElementById("dishOffer");
+
+    for (let dishIndex = 0; dishIndex < restaurants[0].dishes.length; dishIndex++) {
+        contentRef.innerHTML += dishCardTemplates(dishIndex);
+    }
 }

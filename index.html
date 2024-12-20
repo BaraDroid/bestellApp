@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/assets.css">
-    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="./styles/standard.css">
 
     <script src="./scripts/database.js"></script>
@@ -20,42 +20,38 @@
         <img class="menu_icon" src="./assets/imgs/burger_menu.png">
     </header>
 
-        <div class="slider"></div>
+    <section class="all_content">
+        <section class="restaurant_section">
 
-        <section class="main_page">
-        <div class="company_description">
-            <div class="name_and_rating">
-                <h1 id="restaurantName"></h1>
-                <div class="rating">
-                    <span id="ratingBar"></span>
-                    <img class="stars" src="./assets/imgs/review_bar.png" alt="five stars review">
+            <div class="slider">
+            </div>
+
+            <div class="main_content">
+                <div class="company_description">
+                    <div class="name_and_rating">
+                        <h1 id="restaurantName"></h1>
+                        <div class="rating">
+                            <span id="ratingBar"></span>
+                            <img class="stars" src="./assets/imgs/review_bar.png" alt="five stars review">
+                        </div>
+                    </div>
+                    <div class="path_of_dishes" id="pathIndicator">
+                        <img src="./assets/imgs/path_indicator.png" alt="pfeil">
+                        <h4>Alle Gerichte</h4>
+                    </div>
+                    <div id="restaurantPicture" class="custom_picture"></div>
                 </div>
-            </div>
-            <div class="path_of_dishes" id="pathIndicator">
-                <img src="./assets/imgs/path_indicator.png" alt="pfeil">
-                <h4>Alle Gerichte</h4>
-            </div>
-            <div id="restaurantPicture" class="custom_picture"></div>
-        </div>
 
-        <div class="dish_section" id="dishOffer">
-            <div class="dish_card" id="dish0">
-                <div class="dish_description">
-                    <h4 id="dishName0"></h4>
-                    <span id="dishDescription0"></span>
-                    <span id="dishPrice0"></span>
-                </div>
-                <button id="buyDish0">
-                    <img class="btn_img" src="./assets/imgs/plus.png">
-                </button>
-
+                <div class="dish_content" id="dishOffer"></div>
             </div>
-        </div>
+        </section>
+        <section class="cart_section" id="shoppingCart"></section>
+    </section>
+        
+
+    
 
     </section>
-
-    <section class="shopping_cart"></section>
-
     <footer></footer>
 </body>
 </html>
