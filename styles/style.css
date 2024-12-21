@@ -33,7 +33,13 @@ header {
     background-size: cover;
 }
 
-/* COMPANY DESCRIPTION */
+/* ALL CONTENT */
+.all_content {
+    display: flex;
+    max-width: 100dvw;
+}
+
+/* RESTAURANT SECTION */
 .main_content {
     margin: 8px 32px;
     border: 2px solid rgb(58, 1, 1);
@@ -108,4 +114,10 @@ h4 {
 .dish_description {
     display: flex;
     flex-direction: column;
+}
+
+/* CART SECTION */
+.cart_section {
+    width: 200px;
+    background-color:red;
 }
