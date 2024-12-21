@@ -36,12 +36,18 @@ footer {
 /* ALL CONTENT */
 .all_content {
     display: flex;
-
 }
 
 /* RESTAURANT SECTION*/
+.custom_logo {
+    height:136px;
+    position: absolute;
+    top: 60vh;
+    left: 30vw;
+}
+
 .slider {
-    background-image: url(../assets/imgs/pizza_plate_divided.jpg);
+    background-image: url(../assets/imgs/pasta_salad.jpg);
     height: 400px;
     background-size: cover;
 }
