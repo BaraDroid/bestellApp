@@ -2,7 +2,7 @@
 function init() {
     getRestaurantName();
     getRating();
-    getProvidersPicture();
+    getRestaurantPicture();
     renderDishes();
 }
 
@@ -14,8 +14,8 @@ function getRating() {
     document.getElementById("ratingBar").innerHTML = `Bewertung : ${restaurants[0].review}%`;
 }
 
-function getProvidersPicture() {
-    document.getElementById("restaurantPicture").innerHTML = `<img src="${restaurants[0].picture}">`;
+function getRestaurantPicture() {
+    document.getElementById("restaurantPicture").innerHTML = `<img class="custom_picture" src="${restaurants[0].picture}">`;
 }
 
 function renderDishes() {

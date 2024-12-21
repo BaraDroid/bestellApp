@@ -2,7 +2,7 @@ let restaurants = [
     {
         "name": "Luogo del Cuore",
         "review": 99,
-        "picture": "../assets/imgs/antipasto.jpg",
+        "picture":"../assets/imgs/restaurant_view.jpg",
         "dishes": [
             {
                 "dishName": "Spaghetti mit Fleischbällchen",
@@ -49,7 +49,7 @@ let restaurants = [
     {
         "name": "Fancy Imbiss",
         "review": 49,
-        "picture": "../assets/imgs/restaurant_view.jpg",
+        "picture": "../assets/imgs/antipasto.jpg",
         "dishes": [
             {
                 "dishName": "Torte",
