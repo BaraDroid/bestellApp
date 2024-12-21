@@ -49,7 +49,7 @@ let restaurants = [
     {
         "name": "Fancy Imbiss",
         "review": 49,
-        "picture": "../assets/imgs/antipasto.jpg",
+        "picture": "../assets/imgs/restaurant_view.jpg",
         "dishes": [
             {
                 "dishName": "Torte",

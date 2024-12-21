@@ -1,3 +1,13 @@
+button {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(254, 148, 0);
+}
+
 .btn_img{
-    height: 12px;
+    height: 24px;
 }

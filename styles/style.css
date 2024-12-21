@@ -22,32 +22,38 @@ header {
     align-items: center;
 }
 
-.logo {height: 50px;}
+.logo {height: 48px;}
 
 .menu_icon{height: 50px; cursor: pointer;}
 
-/* SLIDER */
-.slider {
-    background-image: url(../assets/imgs/pizza_plate_divided.jpg);
-    height: 400px;
-    background-size: cover;
+/*FOOTER*/
+footer {
+    background-color: rgb(254, 131, 0);
+    padding: 16px 64px;
+    text-align: right;
 }
 
 /* ALL CONTENT */
 .all_content {
     display: flex;
-    max-width: 100dvw;
+
 }
 
-/* RESTAURANT SECTION */
+/* RESTAURANT SECTION*/
+.slider {
+    background-image: url(../assets/imgs/pizza_plate_divided.jpg);
+    height: 400px;
+    background-size: cover;
+}
+.restaurant_section {
+    width: calc(100dvw - 25%);
+    background-color: rgba(242, 174, 2, 0.23);
+}
+
 .main_content {
-    margin: 8px 32px;
+    margin: 8px;
     border: 2px solid rgb(58, 1, 1);
     border-radius: 15px;
-}
-
-.company_description {
-    background-color:rgba(242, 174, 2, 0.23);
 }
 
 h1 {
@@ -109,15 +115,35 @@ h4 {
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
+    height: 140px;
+    margin: 16px 30px;
+    padding: 16px;
 }
 
 .dish_description {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
+
+.price {
+    font-size:22px;
+    color: red;
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.euro {color: rgb(58, 1, 1); font-weight:500; font-size:medium}
+
+.dish_description {
+    display: flex;
+    flex-direction: column;
+}  
 
 /* CART SECTION */
 .cart_section {
-    width: 200px;
+    width: 25%;
     background-color:red;
+    position: sticky;
+    left: 0;
 }
