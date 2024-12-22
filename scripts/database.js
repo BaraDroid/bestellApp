@@ -60,7 +60,7 @@ let restaurants = [
     }
 ];
 
-let Cart = [];
+let cart = [];
 
 let sliderPictures = [
     "../assets/imgs/pasta_salad.jpg",

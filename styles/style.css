@@ -181,7 +181,7 @@ h2 {
     border-radius: 13px 13px 0 0;
 }
 
-.cart_content img {
+.cart_content_empty img {
     height: 36px;
 }
 
@@ -195,12 +195,43 @@ h2 {
     margin-top: 124px;
 }
 
+.d_none {display: none;}
+
 .cart_content_full {
-    margin: 16px;
+    padding: 16px;
 }
 
 h5 {
     text-align: left;
     font-weight: bold;
     font-size: 16px;
+}
+
+.added_meal {
+    margin-top: 24px;
+}
+
+.customize_cart {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.divide {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.216);
+    box-shadow: rgba(157, 149, 150, 0.2) 0px 7px 29px 0px;
+    margin-top: 16px;
+}
+
+table {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.accentuate {
+    font-weight: 900;
+    height: 36px;
 }
