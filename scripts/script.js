@@ -10,3 +10,7 @@ function renderDishes() {
         contentRef.innerHTML += dishCardTemplates(dishIndex);
     }
 }
+
+function insertInCart() {
+
+}
