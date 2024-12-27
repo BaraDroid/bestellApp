@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/overlay.css">
 
-    <script src="./scripts/database.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/templates.js"></script>
+    <script src="./scripts/database.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/templates.js" defer></script>
 </head>
 <body onload="init()">
     <header>
@@ -47,25 +48,28 @@
             </div>
         </div>
 
-        <div class="bg_color">
-            <div class="cart_section">
-                <h2>Warenkorb</h2>
-                <div class="" id="shoppingCart">
-                    <div id="emptyCart" class="cart_content_empty">
-                        <img src="./assets/imgs/shopping-cart.png" alt="shopping cart icon">
-                        <h3>Fülle deinen Warenkorb</h3>
-                        <p>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>
-                    </div>
+        <div class="cart_section">
+            <h2>Warenkorb</h2>
+            <div id="shoppingCart">
+                <div id="emptyCart" class="cart_content_empty">
+                    <img src="./assets/imgs/shopping-cart.png" alt="shopping cart icon">
+                    <h3>Fülle deinen Warenkorb</h3>
+                    <p>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>
                 </div>
-
             </div>
+            <div class="cart_content_full" id="totalSum"></div>
         </div>
+
     </section>
         
-
+    <div class="overlay d_none">
+        <div class="dialog">
+            <h2>Bestellung erfolgreich!</h2>
+            <p><strong>Vielen Dank für Ihre Bestellung.</strong><br><br>Sie wurde erfolgreich aufgenommen und wird nun bearbeitet. Sie erhalten in Kürze eine Bestätigung sowie Details zur Lieferung.</p>
+        </div>
+    </div>
     
 
-    </section>
     <footer>© Barbora</footer>
 </body>
 </html>

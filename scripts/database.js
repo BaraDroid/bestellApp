@@ -1,9 +1,5 @@
-let restaurants = [
-    {
-        "name": "Luogo del Cuore",
-        "review": 99,
-        "picture":"../assets/imgs/restaurant_view.jpg",
-        "dishes": [
+
+let dishes = [
             {
                 "dishName": "Spaghetti mit Fleischbällchen",
                 "description": "Traditionelle italienische Spaghetti, serviert mit saftigen Fleischbällchen in einer würzigen Tomatensauce.",
@@ -44,23 +40,23 @@ let restaurants = [
                 "description": "Ein köstlicher, saftiger Schokoladenkuchen aus Mandeln, serviert mit einer Kugel Vanilleeis und Schokoladensauce.",
                 "price": 6.90
             }
-        ]
-    },
-    {
-        "name": "Fancy Imbiss",
-        "review": 49,
-        "picture": "../assets/imgs/antipasto.jpg",
-        "dishes": [
-            {
-                "dishName": "Torte",
-                "description": "schokotorte",
-                "price": 5
-            }
-        ]
-    }
-];
+        ];
+
+
+// const myChoosedMeal = (dishes.dishName[index]) => dishes.dishName[index] == true;
+
+// console.log(dishes.findIndex(myChoosedMeal));
+
+// const isLargeNumber = (element) => element > 13;
+
+// console.log(array1.findIndex(isLargeNumber));
+
+//bei dem Dialog "fertig" cart leeren
+//responsive cart nur andere Klasse - der gleiche Warenkorb, aber verhält sich anders
 
 let cart = [];
+
+let amounts = [];
 
 let sliderPictures = [
     "../assets/imgs/pasta_salad.jpg",
