@@ -15,22 +15,23 @@ function addToCart(indexMeal) {
     styleCart(); 
     getTheMeal(indexMeal);
     renderCart();
+    oneMealTotal(indexMeal);
     getBillInfo();
 }
 
 function getTheMeal(indexMeal) {
-    if(cart.findIndex((element) => element.dishName == dishes[indexMeal].dishName) < 1) {
-        putInCart();
+    if(cart.findIndex((element) => element.dishName == dishes[indexMeal].dishName) == -1) {
+        putInCart(indexMeal);
     }
     else {
         let newMealAmount = amounts[indexMeal];
-        newMealAmount++;
+        newMealAmount = newMealAmount + 1;
         amounts.splice(indexMeal, 1, newMealAmount);
     }
 }
 
-function putInCart(indexMeal) {
-    let myMeal = dishes[indexMeal];
+function putInCart(index) {
+    let myMeal = dishes[index];
     cart.push(myMeal);
     amounts.push(1);
 }
@@ -52,22 +53,21 @@ function renderCart() {
 }
 
 function getBillInfo() {
-    //getMealPrice();
     document.getElementById("totalSum").innerHTML = "";
     document.getElementById("totalSum").innerHTML = totalSumTemplate();
-    //getTotalMealPrice(index);
 }
 
+function oneMealTotal(cartIndex) {
+    let oneMealSumPrice = document.getElementById(`oneMealSum${cartIndex}`);
+    oneMealSumPrice.innerHTML = "";
+    let toPaySum = amounts[cartIndex] * dishes[cartIndex].price;
+    oneMealSumPrice.innerHTML = toPaySum.toFixed(2);
+}
 
-
-// function getMealPrice() {   //hier will ich eine Gesamtsumme haben, von allen gleichen Gerichten
-//     for (let priceIndex = 0; priceIndex < cart.length; priceIndex++) {
-//         let mealPrice;
-//         mealPrice += cart[priceIndex].price;
-//         console.log(mealPrice);       //wirft NaN raus
-//     }
+// function addSameMeal(indexMeal) {
+//     let newMealAmount = amounts[indexMeal];
+//         newMealAmount = newMealAmount + 1;
+//         amounts.splice(indexMeal, 1, newMealAmount);
+//         oneMealTotal(cartIndex);
 // }
 
-//Position von irgendwelchem Essen kriegen (also index)? takze to snad ani nepotrebuju, kdyz
-//mam indexy....diky for-schleife
-//totalmealprice teprve, az budu mit array mit den prices, ktery pak sectu
