@@ -1,6 +1,7 @@
 
 function init() {
     renderDishes();
+    renderEmptyCart();
 }
 
 function renderDishes() {
@@ -11,11 +12,16 @@ function renderDishes() {
     }
 }
 
+function renderEmptyCart() {
+    let contentRef = document.getElementById("shoppingCart");
+    contentRef.innerHTML = emptyCartTemplate();
+}
+
 function addToCart(indexMeal) {
-    styleCart(); 
     getTheMeal(indexMeal);
     renderCart();
     getBillInfo();
+    getFinalPrice();
 }
 
 function getTheMeal(indexMeal) {
@@ -24,8 +30,7 @@ function getTheMeal(indexMeal) {
         putInCart(indexMeal)
     }
     else {
-           amounts[dishIndex] += 1;
-          // document.getElementById(`oneMealSum${cartIndex}`).innerHTML = (amounts[dishIndex] * cart.price).toFixed(2);
+        amounts[dishIndex] += 1;
     }
 }
 
@@ -35,16 +40,9 @@ function putInCart(index) {
     amounts.push(1);
 }
 
-function styleCart() {
-    if (cart.length < 1) {
-    document.getElementById("emptyCart").classList.add("d_none");
-    document.getElementById("shoppingCart").classList.remove("cart_content_empty");
-    document.getElementById("shoppingCart").classList.add("cart_content_full");
-}
-}
-
 function renderCart() {
     let cartContent = document.getElementById("shoppingCart");
+    cartContent.classList.remove("cart_content_empty");
     cartContent.innerHTML = "";
     for (let cartIndex = 0; cartIndex < cart.length; cartIndex++) {
         cartContent.innerHTML += getCartTemplate(cartIndex);
@@ -68,21 +66,24 @@ function addSameMeal(index) {
     let newAmount = amounts[index] += 1;
     document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
     oneMealTotal(index);
+    getFinalPrice();
 }
 
-function deleteSameMeal(index) {
+function removeSameMeal(index) {
     let newAmount = amounts[index] -= 1;
     document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
-    oneMealTotal(index)
+    oneMealTotal(index);
+    getFinalPrice();
 }
+//nefunguje, pze pri pridani se zase nastavi nula, to se musi vymyslet, aby se to uplne vymazalo, ne jenom pri pozici nula se stane totok a totok
+
 
 function placeOrder() {
     document.getElementById("confirmOrder").classList.remove("d_none");
     cart = [];
     renderCart();
-    document.getElementById("totalSum").classList.add("d_none");
     document.getElementById("shoppingCart").classList.add("cart_content_empty");
-    document.getElementById("shoppingCart").classList.remove("cart_content_full");
+    document.getElementById("totalSum").innerHTML = "";
 }
 
 function closePlaceOrderDialog() {
@@ -90,5 +91,22 @@ function closePlaceOrderDialog() {
 }
 
 function getFinalPrice() {
-    
+    let finalPrice = 0;
+for (let y = 0; y < cart.length; y++) {  
+        finalPrice += amounts[y] * cart[y].price;
+        document.getElementById("totalMealPrice").innerHTML = finalPrice.toFixed(2);
+        document.getElementById("withDeliveryCosts").innerHTML = (finalPrice + 5).toFixed(2);
+}  
+}
+
+function deleteAll(cartIndex) {     //pokud bude v cart jen jedna polozka
+    cart.splice(cartIndex, 1);
+    if (cart.length == 0) {
+    renderEmptyCart();
+    document.getElementById("shoppingCart").classList.add("cart_content_empty");
+    document.getElementById("totalSum").innerHTML = "";
+    }
+    else {
+        renderCart();
+    }
 }

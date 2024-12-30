@@ -175,21 +175,20 @@ h2 {
     border-radius: 13px 13px 0 0;
 }
 
-.cart_content_empty img {
-    height: 36px;
-}
-
 .cart_content_empty {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 16px;
     text-align: center;
     gap: 16px;
-    margin-top: 124px;
+    min-height: calc(100dvh - 211px);
 }
 
-.d_none {display: none;}
+.cart_content_empty img {
+    height: 36px;
+}
 
 .cart_content_full {
     padding: 16px;

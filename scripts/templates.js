@@ -9,28 +9,29 @@ function dishCardTemplates(dishIndex) {
         <button id="buyDish${dishIndex}" onclick="addToCart(${dishIndex})">
             <img class="btn_img" src="./assets/imgs/plus.png">
         </button>
-    </div>`;
+    </div>
+    `;
 }
 
 function getCartTemplate(cartIndex) {
     return `<div class="added_meal">
                         <h5>${cart[cartIndex].dishName}</h5>
                         <div class="customize_cart">
-                            <button onclick="deleteSameMeal(${[cartIndex]})">-</button>
+                            <button onclick="removeSameMeal(${[cartIndex]})">-</button>
                             <span id="oneMealAmount${[cartIndex]}">${amounts[cartIndex]}</span> x <span id="oneMealPrice${cartIndex}">${cart[cartIndex].price.toFixed(2)}</span>€
                             <button onclick="addSameMeal(${cartIndex})">+</button>
                             <span id="oneMealSum${cartIndex}"></span>
-                            <button><img class="btn_img" src="./assets/imgs/trashcan.png"></button>
+                            <button onclick="deleteAll(${cartIndex})"><img class="btn_img" src="./assets/imgs/trashcan.png"></button>
                         </div>
                     </div>
                     <div class="divide"></div>`;
 }
 
-function totalSumTemplate(cartIndex) {
-return `<table>
+function totalSumTemplate() {
+return `<table id="costsTable">
     <tr>
         <td>Zwischensumme</td>
-        <td id="totalMealPrice${cartIndex}" >60,00</td>
+        <td id="totalMealPrice"></td>
         <td>€</td>
     </tr>
     <tr>
@@ -40,9 +41,15 @@ return `<table>
     </tr>
     <tr class="accentuate">
         <td>Gesamt</td>
-        <td>100,00</td>
+        <td id="withDeliveryCosts"></td>
         <td>€</td>
     </tr>
     </table>
     <button id="payBtn" onclick="placeOrder()">Bezahlen</button>`;
+}
+
+function emptyCartTemplate() {
+    return `<img src="./assets/imgs/shopping-cart.png" alt="shopping cart icon">
+            <h3>Fülle deinen Warenkorb</h3>
+            <p>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>`;
 }
