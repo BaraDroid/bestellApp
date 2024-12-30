@@ -48,6 +48,7 @@ function renderCart() {
     cartContent.innerHTML = "";
     for (let cartIndex = 0; cartIndex < cart.length; cartIndex++) {
         cartContent.innerHTML += getCartTemplate(cartIndex);
+        oneMealTotal(cartIndex);
 }
 }
 
@@ -58,8 +59,8 @@ function getBillInfo() {
 }
 
 function oneMealTotal(cartIndex) {
-    let portions = document.getElementById(`oneMealAmount${[cartIndex]}`).innerHTML;
-    let oneMealPrice = document.getElementById(`oneMealPrice${cart[cartIndex]}`).innerHTML;
+    let portions = document.getElementById(`oneMealAmount${cartIndex}`).innerHTML;
+    let oneMealPrice = document.getElementById(`oneMealPrice${cartIndex}`).innerHTML;
     document.getElementById(`oneMealSum${cartIndex}`).innerHTML = (portions * oneMealPrice).toFixed(2);
 }
 
@@ -86,4 +87,8 @@ function placeOrder() {
 
 function closePlaceOrderDialog() {
     document.getElementById("confirmOrder").classList.add("d_none");
+}
+
+function getFinalPrice() {
+    
 }

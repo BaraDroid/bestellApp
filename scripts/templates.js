@@ -17,7 +17,7 @@ function getCartTemplate(cartIndex) {
                         <h5>${cart[cartIndex].dishName}</h5>
                         <div class="customize_cart">
                             <button onclick="deleteSameMeal(${[cartIndex]})">-</button>
-                            <span id="oneMealAmount${[cartIndex]}">${amounts[cartIndex]}</span> x <span id="oneMealPrice${cart[cartIndex]}">${cart[cartIndex].price.toFixed(2)}</span>€
+                            <span id="oneMealAmount${[cartIndex]}">${amounts[cartIndex]}</span> x <span id="oneMealPrice${cartIndex}">${cart[cartIndex].price.toFixed(2)}</span>€
                             <button onclick="addSameMeal(${cartIndex})">+</button>
                             <span id="oneMealSum${cartIndex}"></span>
                             <button><img class="btn_img" src="./assets/imgs/trashcan.png"></button>
