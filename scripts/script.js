@@ -15,18 +15,17 @@ function addToCart(indexMeal) {
     styleCart(); 
     getTheMeal(indexMeal);
     renderCart();
-    oneMealTotal(indexMeal);
     getBillInfo();
 }
 
 function getTheMeal(indexMeal) {
-    if(cart.findIndex((element) => element.dishName == dishes[indexMeal].dishName) == -1) {
-        putInCart(indexMeal);
+    let dishIndex = cart.findIndex((element) => element.dishName == dishes[indexMeal].dishName);
+    if(dishIndex == -1) {
+        putInCart(indexMeal)
     }
     else {
-        let newMealAmount = amounts[indexMeal];
-        newMealAmount = newMealAmount + 1;
-        amounts.splice(indexMeal, 1, newMealAmount);
+           amounts[dishIndex] += 1;
+          // document.getElementById(`oneMealSum${cartIndex}`).innerHTML = (amounts[dishIndex] * cart.price).toFixed(2);
     }
 }
 
@@ -55,19 +54,36 @@ function renderCart() {
 function getBillInfo() {
     document.getElementById("totalSum").innerHTML = "";
     document.getElementById("totalSum").innerHTML = totalSumTemplate();
+
 }
 
 function oneMealTotal(cartIndex) {
-    let oneMealSumPrice = document.getElementById(`oneMealSum${cartIndex}`);
-    oneMealSumPrice.innerHTML = "";
-    let toPaySum = amounts[cartIndex] * dishes[cartIndex].price;
-    oneMealSumPrice.innerHTML = toPaySum.toFixed(2);
+    let portions = document.getElementById(`oneMealAmount${[cartIndex]}`).innerHTML;
+    let oneMealPrice = document.getElementById(`oneMealPrice${cart[cartIndex]}`).innerHTML;
+    document.getElementById(`oneMealSum${cartIndex}`).innerHTML = (portions * oneMealPrice).toFixed(2);
 }
 
-// function addSameMeal(indexMeal) {
-//     let newMealAmount = amounts[indexMeal];
-//         newMealAmount = newMealAmount + 1;
-//         amounts.splice(indexMeal, 1, newMealAmount);
-//         oneMealTotal(cartIndex);
-// }
+function addSameMeal(index) {
+    let newAmount = amounts[index] += 1;
+    document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
+    oneMealTotal(index);
+}
 
+function deleteSameMeal(index) {
+    let newAmount = amounts[index] -= 1;
+    document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
+    oneMealTotal(index)
+}
+
+function placeOrder() {
+    document.getElementById("confirmOrder").classList.remove("d_none");
+    cart = [];
+    renderCart();
+    document.getElementById("totalSum").classList.add("d_none");
+    document.getElementById("shoppingCart").classList.add("cart_content_empty");
+    document.getElementById("shoppingCart").classList.remove("cart_content_full");
+}
+
+function closePlaceOrderDialog() {
+    document.getElementById("confirmOrder").classList.add("d_none");
+}
