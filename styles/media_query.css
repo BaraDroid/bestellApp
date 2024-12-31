@@ -29,7 +29,7 @@
     header {padding: 16px;}
     footer {padding: 16px;}
     .custom_logo {top: 58dvh; left: 45dvw;}
-    .custom_picture {object-position: -0px -210px;}
+    .custom_picture {object-position: -0px -360px;}
     .cart_section {
         background-color: white;
         height: 90dvh;
@@ -61,6 +61,14 @@
 
 @media (max-width: 940px) {
     .cart_section { width: 95dvw;}
+}
+
+@media (max-width: 892px) {
+    .custom_picture {object-position: -0px -300px;}
+}
+
+@media (max-width: 800px) {
+    .custom_picture {object-position: -0px -240px;}
 }
 
 @media (max-width: 702px) {

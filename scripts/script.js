@@ -6,15 +6,21 @@ function init() {
 
 function renderDishes() {
     let contentRef = document.getElementById("dishOffer");
-
     for (let dishIndex = 0; dishIndex < dishes.length; dishIndex++) {
         contentRef.innerHTML += dishCardTemplates(dishIndex);
     }
 }
 
 function renderEmptyCart() {
+    if (JSON.parse(localStorage.getItem('cart')) == []) {
     let contentRef = document.getElementById("shoppingCart");
     contentRef.innerHTML = emptyCartTemplate();
+    }
+    else {
+        renderCart();
+        getBillInfo();
+        getFinalPrice();
+    }
 }
 
 function addToCart(indexMeal) {
@@ -38,9 +44,13 @@ function putInCart(index) {
     let myMeal = dishes[index];
     cart.push(myMeal);
     amounts.push(1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('amounts', JSON.stringify(amounts));
 }
 
 function renderCart() {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    amounts = JSON.parse(localStorage.getItem('amounts'));
     let cartContent = document.getElementById("shoppingCart");
     cartContent.classList.remove("cart_content_empty");
     cartContent.innerHTML = "";
@@ -133,8 +143,17 @@ function hideCart() {
     document.getElementById("cartSection").style.top = "100dvh";
 }
 
+function saveInLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('amounts', JSON.stringify(amounts));
+}
 
-//aby obrazek restaurace sedel pri responsiveness
+// function getFromLocalStorage() {
+//     cart = JSON.parse(localStorage.getItem('cart'));
+// }
+
+
+//zatim se tam ulozi jen jidlo a jednicka v amounts, ktera se nezvetsuje ani nezmensuje
+
 //verschiedene Gerichte - pridat Getränke (chatgpt erstellen lassen) und Beilagen (extra cheese, Foccacia, extra Oliven, doppelte shrimps)
 //odeslat, ackoli bude chybet save in local storage
-//favicon
