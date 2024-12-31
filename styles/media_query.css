@@ -1,0 +1,86 @@
+@media (max-width: 2100px) {.custom_picture {object-position: -0px -250px;}}
+
+@media (max-width: 1185px) {
+    .custom_logo {
+        top: 58dvh;
+        left: 32dvw;
+    }
+    .cart_content_empty {width: 350px;}
+    .cart_content_full {width: 350px;}
+}
+
+@media (max-width: 1170px) {
+    
+    .custom_picture {object-position: -0px -280px;}
+}
+
+@media (max-width: 1104px) {
+    .cart_content_empty {width: 300px;}
+    .cart_content_full {width: 300px;}
+    .custom_picture {object-position: -0px -270px;}
+}
+
+@media (max-width: 1145px) {
+    .custom_picture {object-position: -0px -240px;}
+    .dish_description {font-size: 14px;} 
+}
+
+@media (max-width: 1040px) {
+    header {padding: 16px;}
+    footer {padding: 16px;}
+    .custom_logo {top: 58dvh; left: 45dvw;}
+    .custom_picture {object-position: -0px -210px;}
+    .cart_section {display: none;} /*sem prijde ten warenkorb dolu. plus zkontrolovat custom obr
+} */
+
+@media (max-width: 702px) {
+    .name_and_rating {flex-direction: column; padding: 8px;}
+    .slider {height: 200px;}
+    .custom_logo {
+        height:98px;
+        top: 32dvh;
+        left: 43dvw;
+    }
+    .custom_picture {display: none;}
+    .dish_card {margin: 8px;}
+}
+
+@media (max-width: 675px) {
+    .dish_card {height: 160px;}
+}
+
+@media (max-width: 630px) {
+    .custom_logo {left: 42dvw;}
+}
+
+@media (max-width: 510px) {
+    .custom_logo {left: 39dvw;}
+    .main_content {border: 1px solid rgb(58, 1, 1);}
+    .name_and_rating {border: 1px solid rgb(58, 1, 1);}
+    .dish_card {border: 1px solid rgb(58, 1, 1);}
+}
+
+@media (max-width: 490px) {
+    .dish_card {margin: 8px 16px;}
+}
+
+@media (max-width: 470px) {
+    .dish_card {height: fit-content;}
+}
+
+@media (max-width: 440px) {
+    h1 {font-size: 30px; padding-top: 8px;}
+    .rating {flex-direction: column; justify-content: center; align-items: center; font-size: 14px; gap: 0;}
+    .dish_card {margin: 4px 8px;}
+}
+
+@media (max-width: 420px) {
+    .custom_logo {height: 88px; top: 34dvh;}
+}
+
+@media (max-width: 395px) {
+    .name_and_rating {padding: 4px;}
+    .rating {font-size: 12px;}
+    h1 {font-size: 24px;}
+    .custom_logo {height: 80px; top: 34.5dvh;}
+}

@@ -6,7 +6,7 @@ function dishCardTemplates(dishIndex) {
             <span id="dishDescription${dishIndex}">${dishes[dishIndex].description}</span>
             <span class="price" id="dishPrice${dishIndex}">${dishes[dishIndex].price.toFixed(2)} <span class="euro">€</span></span>
         </div>
-        <button id="buyDish${dishIndex}" onclick="addToCart(${dishIndex})">
+        <button class="dishcard_btn" id="buyDish${dishIndex}" onclick="addToCart(${dishIndex})">
             <img class="btn_img" src="./assets/imgs/plus.png">
         </button>
     </div>
@@ -28,7 +28,7 @@ function getCartTemplate(cartIndex) {
 }
 
 function totalSumTemplate() {
-return `<table id="costsTable">
+return `<table class="costsTable">
     <tr>
         <td>Zwischensumme</td>
         <td id="totalMealPrice"></td>

@@ -41,20 +41,16 @@ footer {
 
 /* RESTAURANT SECTION*/
 .custom_logo {
-    height:136px;
+    height:124px;
     position: absolute;
-    top: 60vh;
-    left: 30vw;
+    top: 60dvh;
+    left: 26dvw;
 }
 
 .slider {
     background-image: url(../assets/imgs/pasta_salad.jpg);
     height: 400px;
     background-size: cover;
-}
-.restaurant_section {
-    width: calc(100dvw - 25%);
-    /*background-color: rgba(242, 174, 2, 0.23);*/
 }
 
 .main_content {
@@ -116,7 +112,7 @@ h4 {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    object-position: -0px -380px;
+    object-position: -0px -330px;
 }
 
 /* DISH CONTENT */
@@ -184,6 +180,7 @@ h2 {
     text-align: center;
     gap: 16px;
     min-height: calc(100dvh - 211px);
+    width: 400px;
 }
 
 .cart_content_empty img {
@@ -191,13 +188,15 @@ h2 {
 }
 
 .cart_content_full {
-    padding: 16px;
+    width: 400px;
+    min-height: calc(100dvh - 211px);
 }
 
 h5 {
     text-align: left;
     font-weight: bold;
     font-size: 16px;
+    padding-left: 24px;
 }
 
 .added_meal {
@@ -206,9 +205,9 @@ h5 {
 
 .customize_cart {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 16px;
+    padding: 16px;
 }
 
 .divide {
@@ -222,6 +221,10 @@ h5 {
 table {
     width: 100%;
     margin-top: 16px;
+}
+
+.costsTable {
+    padding: 16px;
 }
 
 .accentuate {

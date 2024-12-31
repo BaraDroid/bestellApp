@@ -3,13 +3,20 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border-radius: 8px;
     border: none;
     background-color: rgb(209 65 54);
+    min-width: 26px;
+    font-size: 24px;
 }
 
 .btn_img{
     height: 24px;
+}
+
+.dishcard_btn {
+    margin-left: 16px;
 }
 
 #payBtn {
@@ -17,7 +24,8 @@ button {
     margin-right: auto;
     margin-top: 16px;
     color: white;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 900;
-    width: 200px;
+    width: 250px;
+    height: 42px;
 }
