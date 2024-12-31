@@ -30,8 +30,35 @@
     footer {padding: 16px;}
     .custom_logo {top: 58dvh; left: 45dvw;}
     .custom_picture {object-position: -0px -210px;}
-    .cart_section {display: none;} /*sem prijde ten warenkorb dolu. plus zkontrolovat custom obr
-} */
+    .cart_section {
+        background-color: white;
+        height: 90dvh;
+        width: 96dvw;
+        position: fixed;
+        top:0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart_media {
+        height:50px; 
+        background-color: rgb(209 65 54);
+        font-size: 26px;
+        font-weight: 900;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        bottom: 0;
+        border-radius: 15px;
+    }
+} 
+
+@media (max-width: 940px) {
+    .cart_section { width: 95dvw;}
+}
 
 @media (max-width: 702px) {
     .name_and_rating {flex-direction: column; padding: 8px;}
@@ -43,6 +70,10 @@
     }
     .custom_picture {display: none;}
     .dish_card {margin: 8px;}
+}
+
+@media (max-width: 655px) {
+    .cart_section { width: 93dvw;}
 }
 
 @media (max-width: 675px) {
@@ -58,6 +89,7 @@
     .main_content {border: 1px solid rgb(58, 1, 1);}
     .name_and_rating {border: 1px solid rgb(58, 1, 1);}
     .dish_card {border: 1px solid rgb(58, 1, 1);}
+    .cart_section { width: 90dvw;}
 }
 
 @media (max-width: 490px) {

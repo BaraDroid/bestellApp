@@ -150,6 +150,8 @@ h4 {
 }  
 
 /* CART SECTION */
+.cart_media { color: white; font-size: 0;}
+
 .cart_section {
     position: sticky;
     top: 0;
