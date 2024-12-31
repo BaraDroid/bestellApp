@@ -67,6 +67,7 @@ function addSameMeal(index) {
     document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
     oneMealTotal(index);
     getFinalPrice();
+    event.stopPropagation();
 }
 
 function removeSameMeal(index) {
@@ -76,9 +77,11 @@ function removeSameMeal(index) {
         getFinalPrice();
     }
     else {
+        document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
         oneMealTotal(index);
         getFinalPrice();
     }
+    event.stopPropagation();
 }
 
 function placeOrder() {
@@ -87,6 +90,7 @@ function placeOrder() {
     renderCart();
     document.getElementById("shoppingCart").classList.add("cart_content_empty");
     document.getElementById("totalSum").innerHTML = "";
+    event.stopPropagation();
 }
 
 function closePlaceOrderDialog() {
@@ -112,19 +116,25 @@ function deleteAll(cartIndex) {
     document.getElementById("shoppingCart").classList.add("cart_content_empty");
     document.getElementById("totalSum").innerHTML = "";
     getFinalPrice();
+    event.stopPropagation();
     }
     else {
         renderCart();
         getFinalPrice();
+        event.stopPropagation();
     }
 }
 
+function showCart() {
+    document.getElementById("cartSection").style.top = "0";
+}
+
+function hideCart() {
+    document.getElementById("cartSection").style.top = "100dvh";
+}
 
 
-//pak teprve funkce na vymazani, az to bude pod jednicku!
-// function showCart() {
-//     document.getElementById("cartSection").classList.toggle("d_none");
-// }
-
-//funkce, ze bude v kosiku nula polozek, aby se to vymazalo
-//cart toggle pri media query - function showCart, zkusit to pres minus pri position
+//aby obrazek restaurace sedel pri responsiveness
+//verschiedene Gerichte - pridat Getränke (chatgpt erstellen lassen) und Beilagen (extra cheese, Foccacia, extra Oliven, doppelte shrimps)
+//odeslat, ackoli bude chybet save in local storage
+//favicon
