@@ -27,7 +27,7 @@ function addToCart(indexMeal) {
 function getTheMeal(indexMeal) {
     let dishIndex = cart.findIndex((element) => element.dishName == dishes[indexMeal].dishName);
     if(dishIndex == -1) {
-        putInCart(indexMeal)
+        putInCart(indexMeal);
     }
     else {
         amounts[dishIndex] += 1;
@@ -71,12 +71,15 @@ function addSameMeal(index) {
 
 function removeSameMeal(index) {
     let newAmount = amounts[index] -= 1;
-    document.getElementById(`oneMealAmount${[index]}`).innerHTML = `${newAmount}`;
-    oneMealTotal(index);
-    getFinalPrice();
+    if (newAmount == 0) {
+        deleteAll(index);
+        getFinalPrice();
+    }
+    else {
+        oneMealTotal(index);
+        getFinalPrice();
+    }
 }
-//nefunguje, pze pri pridani se zase nastavi nula, to se musi vymyslet, aby se to uplne vymazalo, ne jenom pri pozici nula se stane totok a totok
-
 
 function placeOrder() {
     document.getElementById("confirmOrder").classList.remove("d_none");
@@ -88,6 +91,8 @@ function placeOrder() {
 
 function closePlaceOrderDialog() {
     document.getElementById("confirmOrder").classList.add("d_none");
+    document.getElementById("shoppingCart").classList.add("cart_content_full");
+    renderEmptyCart();
 }
 
 function getFinalPrice() {
@@ -99,14 +104,27 @@ for (let y = 0; y < cart.length; y++) {
 }  
 }
 
-function deleteAll(cartIndex) {     //pokud bude v cart jen jedna polozka
+function deleteAll(cartIndex) {
     cart.splice(cartIndex, 1);
+    amounts.splice(cartIndex, 1);
     if (cart.length == 0) {
     renderEmptyCart();
     document.getElementById("shoppingCart").classList.add("cart_content_empty");
     document.getElementById("totalSum").innerHTML = "";
+    getFinalPrice();
     }
     else {
         renderCart();
+        getFinalPrice();
     }
 }
+
+
+
+//pak teprve funkce na vymazani, az to bude pod jednicku!
+// function showCart() {
+//     document.getElementById("cartSection").classList.toggle("d_none");
+// }
+
+//funkce, ze bude v kosiku nula polozek, aby se to vymazalo
+//cart toggle pri media query - function showCart, zkusit to pres minus pri position

@@ -191,7 +191,9 @@ h2 {
 
 .cart_content_full {
     width: 400px;
-    min-height: calc(100dvh - 211px);
+    min-height: fit-content;
+    margin-top: 16px;
+    margin-bottom: 36px;
 }
 
 h5 {
