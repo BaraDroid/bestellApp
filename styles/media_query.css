@@ -127,3 +127,24 @@
     h1 {font-size: 24px;}
     .custom_logo {height: 80px; top: 34.5dvh;}
 }
+
+@media (max-width: 369px) {
+    .cart_section {width: 300px; overflow-x: hidden;}
+    .cart_content_empty {
+        max-width: 280px; 
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 340px) {
+    .cart_content_full {
+        max-width: 280px;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 338px) {
+    .cart_section {width: 280px;}
+}

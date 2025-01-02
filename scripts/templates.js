@@ -7,10 +7,8 @@ function dishCardTemplates(dishIndex) {
             <span class="price" id="dishPrice${dishIndex}">${dishes[dishIndex].price.toFixed(2)} <span class="euro">€</span></span>
         </div>
         <button class="dishcard_btn" id="buyDish${dishIndex}" onclick="addToCart(${dishIndex})">
-            <img class="btn_img" src="./assets/imgs/plus.png">
-        </button>
-    </div>
-    `;
+            <img class="btn_img" src="./assets/imgs/plus.png"></button>
+        </div>`;
 }
 
 function getCartTemplate(cartIndex) {
