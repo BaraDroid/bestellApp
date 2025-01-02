@@ -31,6 +31,7 @@
     footer {padding: 16px;}
     .custom_logo {top: 58dvh; left: 45dvw;}
     .custom_picture {object-position: -0px -360px;}
+    .customize_cart {padding: 0; gap: 8px;}
     .cart_section {
         background-color: white;
         height: 90dvh;
