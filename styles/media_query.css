@@ -7,6 +7,7 @@
     }
     .cart_content_empty {width: 350px;}
     .cart_content_full {width: 350px;}
+    .dialog {width: 70dvw;}
 }
 
 @media (max-width: 1170px) {
@@ -57,6 +58,7 @@
         bottom: 0;
         border-radius: 15px;
     }
+    .dialog {padding: 50px;}
 } 
 
 @media (max-width: 940px) {
@@ -126,6 +128,7 @@
     .rating {font-size: 12px;}
     h1 {font-size: 24px;}
     .custom_logo {height: 80px; top: 34.5dvh;}
+    .dialog h2 {font-size: 18px;}
 }
 
 @media (max-width: 369px) {
@@ -135,6 +138,7 @@
         padding: 8px;
         font-size: 14px;
     }
+    .dialog {font-size: 14px;}
 }
 
 @media (max-width: 340px) {

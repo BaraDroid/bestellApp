@@ -169,5 +169,3 @@ function showCart() {
 function hideCart() {
   document.getElementById("cartSection").style.top = "100dvh";
 }
-//Warenkorb responsiv besser
-//overlay responsive
